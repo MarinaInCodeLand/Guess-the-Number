@@ -26,6 +26,9 @@ Try to guess the secret number between 1 and 100 within 3 attempts!
 4. You have 3 attempts to guess the correct number.
 5. Click **New Game** to restart.
 
+### 🕹️ Demo
+🔗 [Play here](https://marinaincodeland.github.io/Guess-the-Number/)
+
 ## Technologies Used
 
 - HTML5
@@ -37,4 +40,7 @@ Try to guess the secret number between 1 and 100 within 3 attempts!
 1. Clone the repository:
 ```bash
 git clone https://github.com/MarinaInCodeLand/Guess-the-Number.git
+
+
+
 
