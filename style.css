@@ -1,0 +1,200 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    background: url('images/las-vegas.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+#attempts {
+    color: #9bd3f9;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 120px;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    outline: none;
+}
+
+.btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+}
+
+.btn.secondary {
+    background-color: #4b5563;
+}
+
+.btn.secondary:hover {
+    background-color: #6b7280;
+}
+
+#message {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 50px;
+}
+
+#message span {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    input[type="number"] {
+        width: 100px;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        font-size: 0.95rem;
+    }
+
+    #attempts {
+        font-size: 0.95rem;
+    }
+
+    #message {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="number"] {
+        width: 100px;
+    }
+}
+
+/* animations */
+/* Shake efekt za pogrešan broj */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Blink efekt za pogodak */
+@keyframes blinkColor {
+
+    0%,
+    100% {
+        color: #4ade80;
+    }
+
+    50% {
+        color: #facc15;
+    }
+}
+
+.blink {
+    animation: blinkColor 0.6s ease-in-out 3;
+    /* 3 treptaja */
+}
